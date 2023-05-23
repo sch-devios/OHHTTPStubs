@@ -13,13 +13,6 @@ let package = Package(
                 "OHHTTPStubs",
             ]
         ),
-        .library(
-            name: "OHHTTPStubsSwift",
-            targets: [
-                "OHHTTPStubs",
-                "OHHTTPStubsSwift"
-            ]
-        )
     ],
     dependencies: [
     ],
@@ -29,17 +22,5 @@ let package = Package(
             dependencies: [],
             path: "OHHTTPStubs"
         ),
-        .testTarget(
-            name: "OHHTTPStubsTests",
-            dependencies: ["OHHTTPStubs"]),
-        .target(
-            name: "OHHTTPStubsSwift",
-            dependencies: ["OHHTTPStubs"],
-            path: "OHHTTPStubsSwift"
-        ),
-        .testTarget(
-            name: "OHHTTPStubsSwiftTests",
-            dependencies: ["OHHTTPStubsSwift", "OHHTTPStubs"]
-        )
     ]
 )
