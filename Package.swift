@@ -27,7 +27,7 @@ let package = Package(
         .target(
             name: "OHHTTPStubs",
             dependencies: [],
-            path: "Sources/OHHTTPStubs"
+            path: "OHHTTPStubs"
         ),
         .testTarget(
             name: "OHHTTPStubsTests",
@@ -35,7 +35,7 @@ let package = Package(
         .target(
             name: "OHHTTPStubsSwift",
             dependencies: ["OHHTTPStubs"],
-            path: "Sources/OHHTTPStubsSwift"
+            path: "OHHTTPStubsSwift"
         ),
         .testTarget(
             name: "OHHTTPStubsSwiftTests",
