@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "OHHTTPStubs",
     platforms: [
-        .iOS(.v13),
+        .iOS(.v11),
     ],
     products: [
         .library(
@@ -26,13 +26,17 @@ let package = Package(
     targets: [
         .target(
             name: "OHHTTPStubs",
-            dependencies: []),
+            dependencies: [],
+            path: "Sources/OHHTTPStubs"
+        ),
         .testTarget(
             name: "OHHTTPStubsTests",
             dependencies: ["OHHTTPStubs"]),
         .target(
             name: "OHHTTPStubsSwift",
-            dependencies: ["OHHTTPStubs"]),
+            dependencies: ["OHHTTPStubs"],
+            path: "Sources/OHHTTPStubsSwift"
+        ),
         .testTarget(
             name: "OHHTTPStubsSwiftTests",
             dependencies: ["OHHTTPStubsSwift", "OHHTTPStubs"]
